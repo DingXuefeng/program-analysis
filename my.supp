@@ -1,0 +1,13 @@
+{
+   C::supp()
+   Memcheck:Cond
+   ...
+   fun:_ZN1C*4suppEv
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Value8
+   ...
+   fun:_ZN1C*4suppEv
+}

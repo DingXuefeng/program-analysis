@@ -9,7 +9,9 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_library(C C.cc C.h)
 add_sanitizers(C)
+add_library(D D.cc D.h)
+add_sanitizers(D)
 
 add_executable(main main.cc)
-target_link_libraries(main C)
 add_sanitizers(main)
+target_link_libraries(main C D)

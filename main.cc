@@ -56,9 +56,29 @@ void testC() {
   a.supp();
   C::supp();
 }
+
+#include "D.h"
+void testD() {
+  D::test();
+
+  E *e = new E{};
+//  D d(e);
+  E m { std::move(*e)};
+  E n { std::move(*e)};
+  E o { std::move(m)};
+  E p { std::move(m)};
+  E q;
+  E r { std::move(q)};
+  delete e;
+
+//  std::cout<<"move?"<<std::endl;
+//  D d2(std::move(d));
+//  std::cout<<"move."<<std::endl;
+}
 int main(int argc, char *[]) {
-//  testA();
-//  B::testB(argc);
+  testA();
+  B::testB(argc);
   testC();
+  testD();
   return 0;
 }

@@ -7,10 +7,13 @@ find_package(Sanitizers)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_library(C C.cc C.h)
+add_library(C C.cc include/C.h)
 add_sanitizers(C)
-add_library(D D.cc D.h)
+target_include_directories(C PUBLIC include)
+
+add_library(D D.cc include/D.h)
 add_sanitizers(D)
+target_include_directories(D PUBLIC include)
 
 add_executable(main main.cc)
 add_sanitizers(main)

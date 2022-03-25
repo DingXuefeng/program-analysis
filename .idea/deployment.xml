@@ -2,19 +2,11 @@
 <project version="4">
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="vagrant-centos-7 (304ee338-aa5c-4bd5-9b7a-b95a7cb05a00)">
+      <paths name="vagrant-centos-7 (cdca1fe6-8c9e-4d79-a5a6-ef2bb9c7c9b2)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/tmp.HtOkJw57jz" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/program-analysis" local="$PROJECT_ROOT$" />
           </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-vagrant-centos-7" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-msan-vagrant" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-tsan" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-asan" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-ubsan" />
-          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

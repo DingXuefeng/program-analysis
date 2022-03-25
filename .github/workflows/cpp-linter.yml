@@ -18,18 +18,6 @@ jobs:
           rm -rf build
           cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
-      - uses: shenxianpeng/cpp-linter-action@refs/pull/42/head
-        id: linter
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          style: file
-          tidy-checks:
-          ignore: build
-          database: build
-          extensions: cc,cu
-          files-changed-only: false
-
       - uses: DingXuefeng/cpp-linter-action@master
         id: linter-2
         env:

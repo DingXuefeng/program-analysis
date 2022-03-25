@@ -30,6 +30,18 @@ jobs:
           extensions: cc,cu
           files-changed-only: false
 
+      - uses: DingXuefeng/cpp-linter-action@master
+        id: linter-2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: file
+          tidy-checks:
+          ignore: build
+          database: build
+          extensions: cc,cu
+          files-changed-only: false
+
       - name: Fail fast?!
         if: steps.linter.outputs.checks-failed > 0
         run: |
